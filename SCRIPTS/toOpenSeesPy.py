@@ -3,7 +3,7 @@
 #  Date: June 2018
 #
 # Usage in a Python script
-#   exec(open(toOpenSeesPy.py).read())
+#   exec(open('toOpenSeesPy.py').read())
 #   ...
 #   toOpenSeesPy('model.tcl','model.py')
 #   ...
@@ -51,6 +51,7 @@ def isfloat(value):
 # Function that does the conversion
 #
 def toOpenSeesPy(infile, outfile):
+    outfile = open(outfile,'w')
     outfile.write('\n\n')
     infile = open(infile,'r')
     for line in infile:
